@@ -1,0 +1,653 @@
+/*--------------------------------------------------------------------------------*/
+/* Page structure */
+/*--------------------------------------------------------------------------------*/
+
+body {
+  width : 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 4vh auto;
+  background-color: #F6F6F6;
+}
+
+#header {
+  grid-column: 1 / 3;
+  background-color: #3f3f3f;
+  padding: 0 1%;
+}
+
+#Menu {
+  grid-column: 1;
+  min-height: 96vh;
+  max-height: 96vh;
+  overflow-y: auto;
+}
+
+#Map {
+  grid-column: 2;
+  min-height: 96vh;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Headline & Font Styles */
+/*--------------------------------------------------------------------------------*/
+
+h1, h2, h3, ul, li, a, p, th, td {
+  font-family: 'Lato', sans-serif;
+  color: #575756;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.8em;
+  text-align: center;
+  border-top: solid 2px #575756;
+}
+
+h3 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color : white;
+  text-align : center;
+  margin-top: 0.2%;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* HEADER */
+/*--------------------------------------------------------------------------------*/
+
+.logo {
+  margin-left: 10px;
+  float: left;
+  max-height: 80%;
+  margin-top: 0.2%;
+}
+
+.exit {
+  margin-right: 5px;
+  float: right;
+  max-height: 60%;
+  margin-top: 0.4%;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Tabs */
+/*--------------------------------------------------------------------------------*/
+
+.tabs {
+  margin-top: 25px;
+  display: flex;
+}
+
+.tabs ul {
+  place-content: start space-evenly;
+  list-style-type: none;
+}
+
+.tabs li {
+  font-weight: 700;
+  font-size: 1.2em;
+  color:white; 
+}
+
+.tabs a {
+  display:inline-block;
+  background-color:#646363ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  margin: 10px;
+  width: 100px;
+}
+
+.tabs .active a {
+  background-color:#009a3f;
+}
+
+.icone {
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Structure Add-Format - Flex */
+/*--------------------------------------------------------------------------------*/
+
+#Add-Format {
+  border-top: solid 2px #009a3f;
+  display: flex;
+  justify-content: space-around;
+}
+
+#Add-Format h3 {
+  font-weight: 700;
+  font-size: 1.4em;
+  margin: 15px 0 10px 0;
+}
+
+#Add-Format input[type="text"]:disabled, #Add-Format .text:disabled {
+  background: #cccccc;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Add-FORM / Delete-FORM / Search-FORM */
+/*--------------------------------------------------------------------------------*/
+
+#Add-FORM, #Delete-FORM, #Search-FORM  {
+  padding: 2%;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Tabs-content */
+/*--------------------------------------------------------------------------------*/
+
+#content {
+  margin: 0;
+  padding: 2%;
+}
+
+.tabs-content {
+  position:relative;
+  z-index:3;
+  background-color:#f6f6f6ff;
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Structures 4 colonnes (Add-IMG / Add-Ortho) - Grid */
+/*--------------------------------------------------------------------------------*/
+
+#Add-IMG, #Add-Ortho {
+  border: none;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25px auto;
+  padding: 3% 0;
+}
+
+#Add-IMG h2, #Add-Ortho h2 {
+  margin : 0;
+  grid-column: 1 / 5;
+}
+
+.grid4col_one {
+  grid-column: 1;
+}
+
+.grid4col_two {
+  grid-column: 2;
+}
+
+.grid4col_three {
+  grid-column: 3;
+}
+
+.grid4col_four {
+  grid-column: 4;
+}
+
+.grid4col_one, .grid4col_two, .grid4col_three, .grid4col_four {
+  padding-top: 5%;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Structure 3 colonnes (Add-Lidar / Add-Project) - Grid */
+/*--------------------------------------------------------------------------------*/
+
+#Add-Lidar, #Add-Project {
+  border: none;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 25px auto;
+  padding: 3% 0;
+}
+
+#Add-Lidar h2, #Add-Project h2 {
+  margin : 0;
+  grid-column: 1 / 4;
+}
+
+.grid3col_one {
+  grid-column: 1;
+}
+
+.grid3col_two {
+  grid-column: 2;
+}
+
+.grid4col_three {
+  grid-column: 3;
+}
+
+.grid3col_one, .grid3col_two, .grid3col_three {
+  padding-top: 1%;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Structures boutons (Add-submit) - Flex */
+/*--------------------------------------------------------------------------------*/
+
+#Add-submit {
+  display:flex;
+  justify-content: space-between;
+  padding: 2% 0 1% 0;
+}
+
+.Add_none {
+  border: none;
+  width: 0.1px;
+  background-color: #f6f6f6;
+}
+
+.Add_button {
+  background-color:#009a3f;
+  font-weight: 700;
+  color: white;
+  border: none;
+  padding: 10px 75px;
+  border-radius: 5px;
+}
+
+.Add_button:hover {
+  background-color: #57c160;
+}
+
+.Add_reset {
+  background-image: url("icons/reset.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center;
+  background-color: #575756;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+}
+
+.Add_reset:hover {
+  background-color: #919191;
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Styles champs */
+/*--------------------------------------------------------------------------------*/
+
+#Add-IMG [type="text"], #Add-Ortho [type="text"] {
+  width: 90%;
+}
+
+#Add-IMG .text, #Add-Ortho .text {
+  width: 90%;
+}
+
+#Add-Project [type="text"], #Add-Lidar [type="text"] {
+  width: 95%;
+}
+
+#Add-IMG .file-input, #Add-Ortho .file-input {
+  width: 90%;
+}
+
+#Add-Lidar .file-input, #Add-Project .file-input {
+  width: 95%;
+}
+
+[type="text"] , [type="imput"], .text {
+  height: 30px; 
+  width: calc(12vw);
+  box-sizing: border-box;
+  border: 2px solid rgba(204, 204, 204, 0.514);
+  -webkit-transition: 3s; 
+  transition:1s;
+  outline: none;
+  border-radius: 5%;
+  text-align: left;
+} 
+
+[type="text"]:focus , [type="imput"]:focus, .text:focus {
+  border: 2px solid rgba(156, 156, 156, 0.514);
+  -webkit-transition: 3s; 
+  transition:1s;
+}
+
+.file { /*hiding the imput */
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.file-input label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 25px;
+  color: black;
+  font-weight: bold; /*add in every button */
+  cursor: pointer;
+  transition: transform .2s ease-out;
+  background-color:#8b8b8b4d;
+  border: 2px solid rgba(204, 204, 204, 0.514);
+  cursor: pointer;
+  outline : none;
+}
+
+.file-input label:active{
+  background-color:rgb(231, 231, 231);
+}
+
+/* file name displayed with JS */
+.file-name {   
+  position: absolute;
+  bottom: -15px;
+  left: 0px;
+  color: #555;
+  background-color:#11ffee00;
+}
+
+/* bigger labels for all buttons */
+input:hover + label, input:focus + label {
+  transform: scale(1.02);
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* CheckBox */
+/*--------------------------------------------------------------------------------*/
+
+ul, li {        
+  list-style-type: none;
+}
+
+ul.ul-checkbox {
+  padding-left: 0;
+  list-style: none;
+  display: table;
+  width: 90%;
+  margin: 5px 0 0 0;
+}
+
+.ul-checkbox li {          
+  display:table-row;
+}
+
+.ul-checkbox li label {
+  display: table-cell;
+  background-color: white;
+  border: 1px solid rgba(139, 139, 139, .3);
+  color: black;
+  white-space: nowrap;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all .2s;
+  padding: 5px 4px 3px 4px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1em;
+  color: #575756;
+}
+
+ul.ul-checkbox li label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  padding: 5px 4px 3px 4px;
+  content: "+";
+  transition: transform .1s ease-in-out;
+}
+
+ul.ul-checkbox li input[type="checkbox"]:checked + label::before { /*cool animation */
+  content: "✓";
+  transform: rotate(-360deg);
+  transition: transform .2s ease-in-out;
+}
+
+ul.ul-checkbox li input[type="checkbox"]:checked + label{
+  background-color: #2c9637ff; 
+  border: 1px solid white;
+  color: white;
+  transition: all .2s;
+}
+
+ul.ul-checkbox  li input[type="checkbox"] {
+  display: absolute;
+}
+
+ul.ul-checkbox  li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.Search_project input:checked ~ .checkmark, .Delete_project input:checked ~ .checkmark{
+  
+    background-color: #f32144;
+  }
+
+
+
+/*--------------------------------------------------------------------------------*/
+/* Scroll bar */
+/*--------------------------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+
+/*--------------------------------------------------------------------------------*/
+/* Structure of the pages Search-BDL / Delete-BDL - Grid */
+/*--------------------------------------------------------------------------------*/
+
+#Search-BDL, #Delete-BDL {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: solid 2px #009a3f;
+  padding: 5px 0 10px 0;
+}
+
+.SD_three {
+  display: flex;
+  justify-content: space-evenly;
+  height: 90px;
+}
+
+.SD_three h3 {
+  width: 50px;
+}
+
+.SD_four {
+  height: 4px;
+}
+
+.SD_three input {
+  width: 30px;
+  height: 30px;
+}
+
+#Search_Storage, #Search_bdl, #Delete_Storage, #Delete_bdl {
+  height: 30px; 
+  width: calc(10vw);
+  margin: 5px 0%;
+  box-sizing: border-box;
+  border: 2px solid rgba(204, 204, 204, 0.514);
+  -webkit-transition: 3s; 
+  transition:1s;
+  outline: none;
+  border-radius: 5%;
+  text-align: left;
+}
+
+.SD_reset {
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-image: url("icons/reset.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-color: #575756;
+  background-position: center;
+  border: none;
+}
+
+.SD_reset:hover {
+  background-color: #919191;
+}
+
+.SD_validate {
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-image: url("icons/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-color: #009a3f;
+  background-position: center;
+  border: none;
+}
+
+.SD_validate:hover {
+  background-color: #57c160;
+}
+
+.Delete_center {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+}
+
+.SD_delete {
+  background-color:#009a3f;
+  font-weight: 700;
+  color: white;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 5px;
+}
+
+.SD_delete:hover {
+  background-color: #57c160;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Table structures (Search-BDL / Delete-BDL) */
+/*--------------------------------------------------------------------------------*/
+
+table {
+  padding: 0% 2% 2% 2%;
+}
+
+.table_first {
+  width : 80px;
+  text-align: left;
+}
+
+.table_second {
+  width: 40px;
+  text-align: center;
+}
+
+.table_button {
+  width: 25px;
+  height: 25px;
+}
+
+tr {
+  z-index:10;
+}
+
+th {
+  font-weight: 700;
+}
+
+td {
+  z-index:-10;
+}
+
+.t {
+   background-color: #009a3f;
+}
+
+.f {
+  background-color: #cccccc;
+}
+
+button {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  background-image: url("icons/search.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-color: #009a3f;
+  background-position: center;
+  border: none;
+}
+
+button:hover {
+  background-color: #57c160;
+}
+
+button:active {
+  background-color: #009a3f;
+  box-shadow: 1px 1px #666;
+}
+
+.Dcheckbox {
+  width: 20px;
+  height: 20px;
+}
