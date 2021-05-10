@@ -15,8 +15,8 @@ function GetProjectLayer () {
 
     //Send Ajax to Aja.php
     fetch('Ajax.php', {
-    method: 'post',
-    body: Projdata
+        method: 'post',
+        body: Projdata
     })
     .then(res => res.json()) //Get result in .json
     .then(res => { 
@@ -57,8 +57,8 @@ inGeoImg.addEventListener('change', e => {
         method: 'post',
         body: data
     })
-    .then(r => r.text())
-    .then(r => {
+        .then(r => r.text())
+        .then(r => {
         let TypeGeo = r.split('"')[3];
         //If Upload return Error :: change style of label "red" - SRID disabled
         if(r.split(' ')[0] == "Error") {
@@ -113,8 +113,8 @@ inGeoOrtho.addEventListener('change', e => {
         method: 'post',
         body: data
     })
-    .then(r => r.text())
-    .then(r => {
+        .then(r => r.text())
+        .then(r => {
         let TypeGeo = r.split('"')[3];
         //If Upload return Error :: change style of label "red" - SRID disabled
         if(r.split(' ')[0] == "Error") {
@@ -143,11 +143,11 @@ inGeoOrtho.addEventListener('change', e => {
     })
     //Set default style and SRID disabled
     } else {
-    olabel.innerText = inGeoOrtho.files.length + " selected : Need shp, shx and dbf ";
-    olabel.style.backgroundColor = "#8b8b8b4d";
-    olabel.style.color = "black";
-    oSrid.disabled=true;
-    console.log('Missing files.Need shp, shx and dbf');
+        olabel.innerText = inGeoOrtho.files.length + " selected : Need shp, shx and dbf ";
+        olabel.style.backgroundColor = "#8b8b8b4d";
+        olabel.style.color = "black";
+        oSrid.disabled=true;
+        console.log('Missing files.Need shp, shx and dbf');
     }
 });
 
@@ -201,11 +201,11 @@ inGeoLidar.addEventListener('change', e => {
     })
     //Set default style and SRID disabled
     } else {
-    llabel.innerText = inGeoLidar.files.length + " selected : Need shp, shx and dbf ";
-    llabel.style.backgroundColor = "#8b8b8b4d";
-    llabel.style.color = "black";
-    lSrid.disabled=true;
-    console.log('Missing files.Need shp, shx and dbf');
+        llabel.innerText = inGeoLidar.files.length + " selected : Need shp, shx and dbf ";
+        llabel.style.backgroundColor = "#8b8b8b4d";
+        llabel.style.color = "black";
+        lSrid.disabled=true;
+        console.log('Missing files.Need shp, shx and dbf');
     }
 });
 
@@ -258,11 +258,11 @@ inGeoProj.addEventListener('change', e => {
     })
     //Set default style and SRID disabled
     } else {
-    plabel.innerText = inGeoProj.files.length + " selected : Need shp, shx and dbf ";
-    plabel.style.backgroundColor = "#8b8b8b4d";
-    plabel.style.color = "black";
-    pSrid.disabled=true;
-    console.log('Missing files.Need shp, shx and dbf');
+        plabel.innerText = inGeoProj.files.length + " selected : Need shp, shx and dbf ";
+        plabel.style.backgroundColor = "#8b8b8b4d";
+        plabel.style.color = "black";
+        pSrid.disabled=true;
+        console.log('Missing files.Need shp, shx and dbf');
     }
 });
 
